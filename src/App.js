@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Achievements from './achievementTemplate';
+import achievementsPerYear from './achievmentData';
+import styles from './App.module.css';
 
-function App() {
+function AchievementsPage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+    <h1 className={styles.title}>OUR ACHIEVEMENTS</h1>
+      {achievementsPerYear.map((yearData, yearIndex) => (
+        <div key={yearIndex}>
+          <h1 className={styles.year}>{yearData.year}</h1>
+          <div className={styles.achievementsContainer}>
+            {yearData.achievements.map((achievement, index) => (
+              <Achievements
+                key={index}
+                imageLink={achievement.imageLink}
+                title={achievement.title}
+                description={achievement.description}
+                reverseLayout={achievement.reverseLayout}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default App;
+export default AchievementsPage;
