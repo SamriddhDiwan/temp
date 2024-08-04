@@ -7,7 +7,7 @@
     height: 389px;
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
-    opacity: 0px;
+    opacity: 0;
 
   }
   
@@ -17,7 +17,7 @@
     top: 2px;
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
-    opacity: 0px;
+    opacity: 0;
 
   }
   
@@ -28,7 +28,7 @@
     top: 29px;
     left: 531.86px;
     gap: 0px;
-    opacity: 0px;
+    opacity: 0;
 
     font-family: Inter;
     font-size: 36px;
@@ -46,7 +46,7 @@ height: 226px;
 top: 144px;
 left: 531.86px;
 gap: 0px;
-opacity: 0px;
+opacity: 0;
 
     font-family: Inter;
 font-size: 24px;
