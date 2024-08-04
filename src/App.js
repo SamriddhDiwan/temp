@@ -2,6 +2,7 @@ import React from 'react';
 import Achievements from './achievementTemplate';
 import achievementsPerYear from './achievmentData';
 import styles from './App.module.css';
+import image from './image.png'
 
 function AchievementsPage() {
   return (
@@ -14,7 +15,7 @@ function AchievementsPage() {
             {yearData.achievements.map((achievement, index) => (
               <Achievements
                 key={index}
-                imageLink={achievement.imageLink}
+                imageLink={image}
                 title={achievement.title}
                 description={achievement.description}
                 reverseLayout={achievement.reverseLayout}
